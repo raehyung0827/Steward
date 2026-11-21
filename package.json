@@ -1,0 +1,18 @@
+{
+  "name": "raehyung-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "haha": "node index.js",
+    "dev": "tsx watch src/index.js",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
