@@ -5,14 +5,25 @@
   "type": "module",
   "scripts": {
     "haha": "node index.js",
-    "dev": "tsx watch src/index.js",
+    "dev": "tsx watch src/index.ts",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:studio": "drizzle-kit studio"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.4",
+    "ioredis": "^6.1.0",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
   }
 }

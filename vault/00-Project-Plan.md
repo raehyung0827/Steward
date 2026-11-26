@@ -18,12 +18,12 @@ A backend-first SaaS that helps users stay productive, intentional, and privacy-
 ---
 
 ## 2. Tech Stack
-- **Runtime & Framework**: Node.js (v22) + Express 5 + TypeScript
-- **Database**: PostgreSQL 16 + Drizzle ORM
+- **Runtime & Framework**: Node.js (v22, built-in `process.loadEnvFile()`) + Express 5 + TypeScript 7 (`NodeNext` ESM)
+- **Database**: PostgreSQL 16 + `pg.Pool` + Drizzle ORM
 - **Cache & Rate Limiting**: Redis 7 (`ioredis`)
 - **Message Queue**: RabbitMQ (introduced in Week 3 for write-burst buffering & async webhooks)
 - **Validation**: Zod
-- **Infrastructure**: Docker & Docker Compose
+- **Infrastructure**: Docker & Docker Compose (`name: steward`)
 - **Load Testing**: k6
 
 ---
@@ -76,8 +76,14 @@ For every single feature and tech spec, follow the 3-step loop:
 
 ---
 
-## 6. 4-Week Milestones
-- **Week 1 — Foundation & Auth**: Docker Compose (Postgres + Redis), Express + TS setup, Drizzle schema, Auth (JWT + Device Token), Rules CRUD.
-- **Week 2 — Ingestion (V1) & Caching**: Direct-to-DB Heartbeat API (V1), Dashboard stats API with Redis Cache-Aside, minimal Chrome Extension.
+## 6. 4-Week Milestones & Current Progress
+- **Week 1 — Foundation & Auth** *(In Progress)*:
+  - [x] Docker Compose (`steward` / PostgreSQL 16)
+  - [x] Node.js 22 + TypeScript 7 (`NodeNext` ESM) + Zod env config (`src/config/env.ts`)
+  - [x] `pg.Pool` + Drizzle ORM setup (`src/db/index.ts`)
+  - [x] Core schema tables 1–2: `users`, `devices` (`src/db/schema.ts`)
+  - [ ] Remaining schema tables 3–6 + indexes + `drizzle-kit push`
+  - [ ] Redis setup, Auth (scrypt + SHA-256 Device Token + JWT), Express 5 & Rules CRUD
+- **Week 2 — Ingestion (V1) & Caching**: Direct-to-DB Heartbeat + Traffic API (V1), Dashboard stats API with Redis Cache-Aside, minimal Chrome Extension.
 - **Week 3 — System Design Upgrade (V2)**: Run `k6` load test on V1 to expose DB bottleneck → add Redis Rate Limiting + RabbitMQ buffering + Batch Upsert Worker → record Before/After benchmarks (TPS, p95 latency, DB CPU).
-- **Week 4 — Webhooks & Live Operation**: Accountability Partner Webhook worker (HMAC signature, exponential backoff, DLQ), deploy live, onboard 5–10 real users.
+- **Week 4 — Webhooks & Live Operation**: Accountability Partner Webhook worker (HMAC signature, exponential backoff, DLQ) + Harmful Site alerts, deploy live, onboard 5–10 real users.

@@ -20,22 +20,22 @@ tags: [moc, backend, raehyung]
 ## 02. Node.js & TypeScript Fundamentals
 - [x] [[02-Node-TS/01-package-json-esm|01. package.json and ESM ("type": "module")]]
 - [x] [[02-Node-TS/02-tsconfig-nodenext|02. tsconfig.json Essentials (NodeNext, strict)]]
-- [ ] [[02-Node-TS/03-node-env-loading|03. Node 22 Built-in .env Loading (process.loadEnvFile)]]
+- [x] [[02-Node-TS/03-node-env-loading|03. Node 22 Built-in .env Loading (process.loadEnvFile)]]
 
 ## 03. Input Validation (Zod)
-- [ ] [[03-Validation/01-zod-basics|01. Zod Schema Definition, coerce, parse vs safeParse]]
+- [x] [[03-Validation/01-zod-basics|01. Zod Schema Definition, coerce, parse vs safeParse]]
 
 ## 04. PostgreSQL & Drizzle ORM
-- [ ] [[04-Postgres-Drizzle/01-pg-pool|01. pg.Pool Connection Pooling]]
-- [ ] [[04-Postgres-Drizzle/02-drizzle-pgtable|02. Drizzle pgTable Columns and Foreign Keys (references, onDelete)]]
-- [ ] [[04-Postgres-Drizzle/03-indexes-and-unique|03. Indexes and Composite Unique Indexes]]
-- [ ] [[04-Postgres-Drizzle/04-drizzle-kit-push|04. drizzle-kit push and Migrations]]
-- [ ] [[04-Postgres-Drizzle/05-batch-upsert|05. High-Throughput Writes: INSERT ... ON CONFLICT DO UPDATE]]
+- [x] [[04-Postgres-Drizzle/01-pg-pool|01. pg.Pool Connection Pooling]]
+- [x] [[04-Postgres-Drizzle/02-drizzle-pgtable|02. Drizzle pgTable Columns and Foreign Keys (references, onDelete)]]
+- [x] [[04-Postgres-Drizzle/03-indexes-and-unique|03. Indexes and Composite Unique Indexes]]
+- [x] [[04-Postgres-Drizzle/04-drizzle-kit-push|04. drizzle-kit push and Migrations]]
+- [x] [[04-Postgres-Drizzle/05-batch-upsert|05. High-Throughput Writes: INSERT ... ON CONFLICT DO UPDATE]]
 
 ## 05. Redis
-- [ ] [[05-Redis/01-ioredis-basics|01. ioredis Connection and Basic Commands (SET, GET, EX, PING)]]
-- [ ] [[05-Redis/02-cache-aside|02. Cache-Aside Pattern and Cache Invalidation]]
-- [ ] [[05-Redis/03-rate-limiting|03. Rate Limiting with Redis]]
+- [x] [[05-Redis/01-ioredis-basics|01. ioredis Connection and Basic Commands (SET, GET, EX, PING)]]
+- [x] [[05-Redis/02-cache-aside|02. Cache-Aside Pattern and Cache Invalidation]]
+- [x] [[05-Redis/03-rate-limiting|03. Rate Limiting with Redis]]
 
 ## 06. Auth & Cryptography
 - [ ] [[06-Auth-Crypto/01-scrypt-password|01. Password Hashing with crypto.scrypt and timingSafeEqual]]

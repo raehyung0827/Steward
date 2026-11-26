@@ -1,0 +1,17 @@
+name: steward
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: raehyung-postgres
+    environment:
+      POSTGRES_USER: raehyung
+      POSTGRES_PASSWORD: raehyung_dev_pass
+      POSTGRES_DB: raehyung
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:7-alpine
+    container_name: raehyung-redis
+    ports:
+      - "6379:6379"
